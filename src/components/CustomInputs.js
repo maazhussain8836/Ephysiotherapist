@@ -20,14 +20,16 @@ const CustomInputs = ({value,setValue,placeholder,secureTextEntry}) => {
 const style=StyleSheet.create({
     inpurText:{
         opacity:0.7,
-        borderWidth:1,
-        // marginBottom:'2%',
+        // borderWidth:2,
+        backgroundColor:'#E6E6E3',
+        marginBottom:'-3%',
         borderColor:'#c2c2c2',
-        paddingHorizontal:7,
+        paddingHorizontal:17,
         // width:370,
         // marginLeft:10,
+        borderRadius:30,
         paddingLeft:40,
-        marginBottom:-30,
+        // marginBottom:-30,
         
 
 

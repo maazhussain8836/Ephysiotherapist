@@ -23,7 +23,7 @@ const Login = ({navigation}) => {
   const onPressLogin = () => {
     navigation.navigate('Diet');
   };
-  
+
   return (
     <ScrollView>
       <View
@@ -31,13 +31,16 @@ const Login = ({navigation}) => {
           display: 'flex',
           justifyContent: 'center',
           flex: 1,
+          width: '90%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
           flexDirection: 'column',
           backgroundColor: '#FFF',
           opacity: 1,
         }}>
         <SafeAreaView>
           {/* <Image source={Image11} style={styles.loginImage} /> */}
-          <ImageBackground
+          {/* <ImageBackground
             source={Image11}
             resizeMode="contain"
             style={styles.loginImage}>
@@ -48,19 +51,19 @@ const Login = ({navigation}) => {
                 backgroundColor: '#000',
                 opacity: 0.7,
               }}></View>
-          </ImageBackground>
+          </ImageBackground> */}
           <View style={{...styles.backgroundView}}>
             <Image
-              source={require('../assets/images/logoP4.png')}
-              style={{width: '100%', height: '20%', resizeMode: 'contain'}}
+              source={require('../assets/images/physiog2.jpg')}
+              style={{width: '100%', height: '18%', resizeMode: 'contain'}}
             />
             <View style={{padding: 20, position: 'relative'}}>
-              <Text style={styles.text}>Username</Text>
+              <Text style={{...styles.text,marginBottom:'13%'}}>Hey,{'\n'}Login Now,</Text>
               <Icon
                 size={24}
-                color="#113255"
+                color="#40E0D0"
                 name="account"
-                style={{position: 'absolute', top: 90, left: 23}}
+                style={{position: 'absolute', top: 145, left: 29,zIndex:1}}
               />
               <CustomInputs
                 placeholder={'Username'}
@@ -70,12 +73,12 @@ const Login = ({navigation}) => {
               />
             </View>
             <View style={{padding: 20, position: 'relative'}}>
-              <Text style={styles.text}>Password</Text>
+              {/* <Text style={styles.text}>Password</Text> */}
               <IconOct
                 size={20}
-                color="#113255"
+                color="#40E0D0"
                 name="lock"
-                style={{position: 'absolute', top: 90, left: 26}}
+                style={{position: 'absolute', top: 35, left: 35,zIndex:1}}
               />
               <CustomInputs
                 placeholder={'Password'}
@@ -85,33 +88,35 @@ const Login = ({navigation}) => {
               />
               <Icon
                 size={24}
-                color="#113255"
+                color="#40E0D0"
                 name="eye-outline"
-                style={{position: 'absolute', top: 90, left: 343}}
+                style={{position: 'absolute', top: 35, right: 30}}
               />
+            </View>
+      
+            <View>
+              {/* button Login */}
+              <Pressable onPress={onPressLogin}>
+                <CustomButtons text={'LOGIN'} />
+              </Pressable>
             </View>
             <View
               style={{
                 display: 'flex',
+                
                 justifyContent: 'center',
               }}>
               <TouchableOpacity>
                 <Text
                   style={{
                     ...styles.text,
-                    color: '#606060',
-                    marginLeft: '5%',
+                    color: '#145D94',
+                    textAlign:'center',
                     fontSize: 15,
                   }}>
                   Forgot Password?
                 </Text>
               </TouchableOpacity>
-            </View>
-            <View>
-              {/* button Login */}
-              <Pressable onPress={onPressLogin}>
-                <CustomButtons text={'Login'} />
-              </Pressable>
             </View>
             <View
               style={{
@@ -126,7 +131,7 @@ const Login = ({navigation}) => {
                 }}>
                 <Text style={{...styles.text, color: '#606060', fontSize: 15}}>
                   Don't have account?{' '}
-                  <Text style={{color: '#e6b257', fontWeight: 'bold'}}>
+                  <Text style={{color: '#40E0D0', fontWeight: 'bold'}}>
                     Register
                   </Text>{' '}
                 </Text>
@@ -151,7 +156,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   backgroundView: {
-    top: -40,
+    top: 80,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     height: 700,
@@ -159,10 +164,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
   },
   text: {
-    color: '#000',
-    marginVertical: '5%',
-    fontSize: 16,
+    color: '#40E0D0',
+    // marginVertical: '5%',
+    // marginBottom: '3%',
+    fontSize: 25,
     fontWeight: 'bold',
+    marginVertical:'3%'
   },
 });
 export default Login;
